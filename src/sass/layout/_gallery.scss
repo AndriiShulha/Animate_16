@@ -1,0 +1,71 @@
+.container {
+    @include container ($wd: 100%x, $ml: auto, $mr: auto, $pl: 0px, $pr: 0px);
+
+    @include respond-to('small') {
+        @include container ($wd: 320px, $ml: auto, $mr: auto, $pl: 0px, $pr: 0px);
+    }
+
+    @include respond-to('medium') {
+        @include container ($wd: 768px, $ml: auto, $mr: auto, $pl: 0px, $pr: 0px);
+    }
+
+    @include respond-to('large') {
+        @include container ($wd: 430px, $ml: auto, $mr: auto, $pl: 0px, $pr: 0px);
+    }
+}
+.gallery {
+    outline: 1px solid red;
+    background: linear-gradient(to bottom, #fff5f6 0%, #fff5f6 19%, #ffffff 19%, #ffffff 100%, #ffffff 100%, #ffffff 100%); 
+     
+    @include respond-to('medium') {
+        background: linear-gradient(to bottom, #fff5f6 0%, #fff5f6 57%, #ffffff 57%, #ffffff 100%, #ffffff 100%, #ffffff 100%);
+    }
+    @include respond-to('large') {
+        background: linear-gradient(to bottom, #fff5f6 0%, #fff5f6 66%, #ffffff 66%, #ffffff 100%, #ffffff 100%, #ffffff 100%);
+    }
+
+}
+
+source {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.thumb {
+    
+    
+}
+ .gellery_row {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include respond-to('medium') {
+            gap: 6px;
+        }
+    
+        @include respond-to('large') {
+            gap: 8px;
+        }
+
+}
+.gellery_width {
+    overflow: hidden;
+    border: 1px solid red;
+    border-radius: 8px;
+    width: 43px;
+    
+        @include respond-to('medium') {
+            width: 105px;
+            border-radius: 20px;
+        }
+    
+        @include respond-to('large') {
+            width: 138px;
+        }
+}
+.gellery_relative {
+    position: relative;
+}
